@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>empha.tech</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'VT323', monospace;
+      font-size: 16px; /* Base font size for better scaling */
+    }
+
+    /* Black Background */
+    body {
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* Changed to min-height to prevent overflow */
+      overflow: hidden;
+      padding: 20px; /* Add some padding for very small screens */
+    }
+
+    /* Center Container */
+    .container {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+      width: 90%; /* Container width */
+      max-width: 600px; /* Maximum width */
+    }
+
+    /* Company Name Styling */
+    .company-name {
+      font-size: clamp(2.5rem, 8vw, 4rem); /* Responsive font size */
+      margin: 0;
+      padding: 0;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+
+    /* Coming Soon Text */
+    .coming-soon {
+      font-size: clamp(1rem, 4vw, 2rem); /* Responsive font size */
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 0.5em;
+    }
+
+    /* Animation for Fade-In */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Media Queries for additional adjustments if needed */
+    @media (max-height: 400px) {
+      .container {
+        padding: 10px 0;
+      }
+      .company-name {
+        font-size: clamp(2rem, 6vw, 3rem);
+      }
+      .coming-soon {
+        font-size: clamp(0.8rem, 3vw, 1.5rem);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="company-name">empha.tech</h1>
+    <p class="coming-soon">Coming Soon...</p>
+  </div>
+</body>
+</html>
