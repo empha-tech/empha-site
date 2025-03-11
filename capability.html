@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>empha.tech - Capability Statement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles remain the same */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f0f0;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+        }
+
+        .download-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #000;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'VT323', monospace;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        .download-button:hover {
+            background: #333;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            padding: 15mm; /* Reduced padding */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px; /* Reduced margin */
+        }
+
+        .logo {
+            font-size: 28px; /* Slightly smaller */
+            font-weight: bold;
+            font-family: 'VT323', monospace;
+        }
+
+        .vosb-logo {
+            height: 60px; /* Slightly smaller */
+            width: auto;
+            object-fit: contain;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 15px; /* Reduced gap */
+            height: calc(100% - 100px); /* Adjusted for smaller header/footer */
+        }
+
+        /* Updated quadrant styles */
+        .quadrant {
+            border: 1px solid #ccc;
+            padding: 15px; /* Reduced padding */
+            background: #f8f8f8;
+            overflow: auto;
+            font-size: 0.9rem; /* Smaller base font size */
+        }
+
+        .quadrant h2 {
+            font-family: 'VT323', monospace;
+            font-size: 20px; /* Smaller heading */
+            margin-bottom: 12px;
+            color: #333;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 8px;
+        }
+
+        .quadrant p {
+            font-weight: 600;
+            margin: 12px 0 6px 0;
+            color: #1a1a1a;
+            font-size: 0.95rem;
+        }
+
+        .quadrant p:first-of-type {
+            margin-top: 0;
+        }
+
+        .quadrant div {
+            margin-bottom: 6px;
+            line-height: 1.3;
+            color: #444;
+        }
+
+        /* Special styling for Past Performance section */
+        .past-performance div {
+            padding: 4px 8px;
+            background: #eee;
+            border-radius: 4px;
+            margin-bottom: 6px;
+        }
+
+        /* Special styling for Core Competencies section */
+        .core-competencies div {
+            position: relative;
+            padding-left: 12px;
+            margin-bottom: 4px;
+        }
+
+        .core-competencies div:before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: #666;
+        }
+
+        /* Special styling for Differentiators section */
+        .differentiators div {
+            position: relative;
+            padding-left: 12px;
+            margin-bottom: 8px;
+        }
+
+        .differentiators div:before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: #666;
+        }
+
+        .footer {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .page {
+                box-shadow: none;
+            }
+            .download-button {
+                display: none;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="window.print()" class="download-button">Download PDF</button>
+    
+    <div class="page">
+        <div class="header">
+            <div class="logo">empha.tech</div>
+            <img src="vosb.png" class="vosb-logo" alt="VOSB Logo">
+        </div>
+
+        <div class="grid-container">
+            <div class="quadrant">
+                <h2>> capability_statement</h2>
+                <div>> We are a leading provider of Java software architecture and development services, delivering robust, scalable, and secure solutions for government agencies. Our expertise spans enterprise application development, cloud-native microservices, and Agile software engineering, ensuring mission-critical systems operate efficiently and securely. </div><br><div>> With a deep understanding of Federal IT requirements and compliance, we build and modernize applications that enhance operational effectiveness, improve service delivery, and support digital transformation initiatives.</div>
+            </div>
+            
+            <div class="quadrant past-performance">
+                <h2>> past_performance</h2>
+                <p>Department of Veterans Affairs</p>
+                <div>Veterans Affairs Online Scheduling (VAOS)</div>
+                <div>Veterans Benefits Management System (VBMS)</div>
+                <div>Benefits Integration Platform (BIP)</div>
+            </div>
+            
+            <div class="quadrant core-competencies">
+                <h2>> core_competencies</h2>
+                <p>Java Software Architecture and Development</p>
+                <div>Enterprise development using Spring Framework</div>
+                <div>Cloud-native solutions leveraging AWS</div>
+                <div>Legacy system modernization, maintenance, and support</div>
+                <p>DevSecOps Integration</p>
+                <div>CI/CD Pipelines</div>
+                <div>Continuous and automated testing, reporting, and quality assurance</div>
+                <p>Agile Project Management</p>
+                <div>IT modernization and digital transformation</div>
+                <div>Expertise in Scrum, Kanban, SAFe, and Lean methodologies</div>
+            </div>
+            
+            <div class="quadrant differentiators">
+                <h2>> differentiators</h2>
+                <div>Combined 50+ years developing and modernizing Java applications</div>
+                <div>AWS Certified Solutions Architect - Professional</div>
+                <div>We specialize in streamlining the development process through contract-driven development and automated deployment solutions</div>
+                <div>Our focus is on providing contract-driven containerized solutions with consumable reporting at all phases of the product lifecycle</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            © 2025 empha.tech | innovative solutions for the modern enterprise
+        </div>
+    </div>
+</body>
+</html>

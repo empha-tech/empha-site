@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>empha.tech</title>
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     /* General Reset */
     body, html {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'VT323', monospace;
+      font-family: 'Inter', sans-serif;
       font-size: 16px;
       scroll-behavior: smooth;
     }
 
     body {
-      background-color: black;
-      color: white;
+      background-color: white;
+      color: black;
       overflow-x: hidden;
     }
 
@@ -34,28 +34,38 @@
       padding: 1rem;
       min-height: 100vh;
       height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 1rem;
+      box-sizing: border-box;
     }
 
     /* Company Name Section */
     .hero {
       text-align: center;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .company-name {
+      font-family: 'VT323', monospace;
       font-size: clamp(2.5rem, 8vw, 4rem);
       margin: 0;
       padding: 0;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.2);
       transition: all 0.8s ease-out;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      position: relative;
+      margin-bottom: 1rem;
     }
 
     .company-name.split {
       opacity: 0;
-      transform: translate(-50%, -50%) scale(0.1);
+      transform: scale(0.1);
     }
 
     /* Core Capabilities Section */
@@ -78,6 +88,7 @@
       transition: all 0.5s ease-out;
       position: relative;
       overflow: hidden;
+      border-color: black;
     }
 
     .arc::before {
@@ -89,8 +100,8 @@
         90deg,
         transparent,
         transparent 20px,
-        rgba(255, 255, 255, 0.1) 20px,
-        rgba(255, 255, 255, 0.1) 40px
+        rgba(0, 0, 0, 0.1) 20px,
+        rgba(0, 0, 0, 0.1) 40px
       );
       animation: tunnel 2s linear infinite;
     }
@@ -110,13 +121,13 @@
     }
 
     .top-arc {
-      border-top: 2px solid white;
+      border-top: 2px solid black;
       border-radius: 50% 50% 0 0;
       transform: translateY(30px);
     }
 
     .bottom-arc {
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid black;
       border-radius: 0 0 50% 50%;
       transform: translateY(-30px);
     }
@@ -144,12 +155,13 @@
     }
 
     .box {
-      border: 2px solid white;
+      border: 2px solid black;
       padding: 2rem;
       width: 200px;
       text-align: center;
       font-size: 1.5rem;
       transition: all 0.5s ease-out;
+      font-weight: 500;
     }
 
     .connector {
@@ -159,11 +171,11 @@
       transform: translate(-50%, -50%) scale(0.9);
       font-size: 1.5rem;
       opacity: 0;
-      border: 2px solid white;
-      background: black;
+      border: 2px solid black;
+      background: white;
       padding: 1rem 2rem;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
-                 inset 0 0 10px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1),
+                 inset 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .connector.visible {
@@ -182,13 +194,13 @@
 
     /* Glowing effect */
     .glow {
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                   0 0 20px rgba(255, 255, 255, 0.6);
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.15),
+                   0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .box, .arc {
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
-                 inset 0 0 10px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.05),
+                 inset 0 0 5px rgba(0, 0, 0, 0.05);
     }
 
     /* Animation classes */
@@ -228,12 +240,14 @@
     .about-title {
       font-size: clamp(2rem, 5vw, 3rem);
       margin-bottom: 2rem;
+      font-weight: 600;
     }
 
     .about-text {
       font-size: clamp(1.1rem, 3vw, 1.5rem);
       line-height: 1.6;
       margin-bottom: 2rem;
+      font-weight: 400;
     }
 
     .contact-info {
@@ -242,16 +256,15 @@
     }
 
     .contact-info a {
-      color: white;
+      color: black;
       text-decoration: none;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid black;
       padding-bottom: 2px;
       transition: all 0.3s ease;
     }
 
     .contact-info a:hover {
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-      border-bottom-color: transparent;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 
     /* Update mobile styles */
@@ -309,6 +322,61 @@
       .typed-text {
         font-size: 1rem; /* Match mobile about-text size */
       }
+
+      /* Adjust capabilities pillars for mobile */
+      .capabilities-pillars {
+        flex-direction: column;
+        padding: 0 1rem;
+        gap: 1.5rem;
+      }
+
+      .pillar {
+        width: 100%;
+        padding: 1.5rem;
+      }
+
+      .pillar-content {
+        font-size: 1rem;
+      }
+
+      /* Improve readability of pillar content */
+      .pillar-content div,
+      .pillar-content p {
+        margin: 0.8rem 0;
+      }
+
+      /* Make the capability statement link more prominent */
+      .capability-link {
+        width: calc(100% - 2rem);
+        justify-content: center;
+        margin: 2rem 1rem;
+      }
+
+      /* Adjust spacing between sections */
+      section {
+        gap: 1.5rem;
+      }
+
+      /* Improve nav readability */
+      .nav-bar {
+        width: 100%;
+        justify-content: space-around;
+      }
+
+      /* Adjust typed text for better mobile reading */
+      .typed-text {
+        padding: 0 1rem;
+      }
+
+      /* Ensure contact info is readable */
+      .contact-info p {
+        margin: 1rem 0;
+      }
+
+      .contact-info a {
+        padding: 0.5rem 0;
+        display: inline-block;
+      }
     }
 
     /* Add touch device optimization */
@@ -318,34 +386,251 @@
       }
 
       .contact-info a:active {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .pillar {
+        transform: none !important; /* Remove hover effect on touch devices */
+      }
+
+      .pillar:active {
+        background: rgba(0, 0, 0, 0.02); /* Subtle feedback on touch */
+      }
+
+      .nav-link,
+      .contact-info a {
+        padding: 0.8rem;
       }
     }
 
+    /* Update typed-text styles to remove caret */
     .typed-text {
       overflow: hidden;
-      border-right: 2px solid white;
       white-space: pre-wrap;
       margin: 0;
       display: inline-block;
-      animation: blink-caret 0.75s step-end infinite;
-      font-size: clamp(1.1rem, 3vw, 1.5rem); /* Match about-text font size */
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
       line-height: 1.6;
       margin-bottom: 2rem;
+      font-weight: 400;
     }
 
+    /* Remove the blink-caret animation since we don't need it anymore */
     @keyframes blink-caret {
-      from, to { border-right-color: white }
-      50% { border-right-color: transparent }
+      /* We can remove this entire keyframe */
+    }
+
+    /* Navigation styles */
+    .nav-bar {
+      position: relative;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: transparent;
+    }
+
+    .nav-link {
+      color: black;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-link:hover {
+      opacity: 1;
+    }
+
+    /* Adjust section padding to account for nav bar */
+    section {
+      padding-top: 4rem;
+    }
+
+    /* Mobile nav adjustments */
+    @media (max-width: 768px) {
+      .nav-bar {
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.75rem;
+      }
+
+      .nav-link {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* New capabilities section styles */
+    .capabilities-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 500;
+    }
+
+    .capabilities-pillars {
+      display: flex;
+      justify-content: space-around;
+      gap: 2rem;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .pillar {
+      flex: 1;
+      padding: 2rem;
+      text-align: center;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      background: white;
+      transition: transform 0.3s ease;
+    }
+
+    .pillar:hover {
+      transform: translateY(-5px);
+    }
+
+    .pillar-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .pillar-content {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Rename current capabilities to process-flow */
+    .process-flow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      font-family: 'VT323', monospace;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .capabilities-pillars {
+        flex-direction: column;
+        padding: 0 1rem;
+      }
+
+      .pillar {
+        width: 100%;
+      }
+    }
+
+    /* Add these styles */
+    .capability-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: black;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      background: white;
+      margin-top: 2rem;
+    }
+
+    .capability-link:hover {
+      background: rgba(0, 0, 0, 0.02);
+      transform: translateY(-2px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Add icon for PDF */
+    .capability-link::after {
+      content: '📄';
+      font-size: 1.2em;
+    }
+
+    @media (max-width: 768px) {
+      .capability-link {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
-  <section class="hero">
+  <section class="hero" id="hero">
     <h1 class="company-name glow">> empha.tech</h1>
+    <nav class="nav-bar">
+      <a href="#capabilities" class="nav-link">Capabilities</a>
+      <a href="#about" class="nav-link">About</a>
+    </nav>
   </section>
 
-  <section class="capabilities">
+  <section class="capabilities" id="capabilities">
+    <h2 class="capabilities-header">Empowering Development Through Innovation</h2>
+    <div class="capabilities-pillars">
+      <div class="pillar">
+        <h3 class="pillar-title">We are...</h3>
+        <p class="pillar-content">
+          <div>a leading provider of Java software architecture and development services, delivering robust, scalable, and secure solutions for government agencies. Our expertise spans enterprise application development, cloud-native microservices, and Agile software engineering, ensuring mission-critical systems operate efficiently and securely. </div>
+          <br>
+          <div> With a deep understanding of Federal IT requirements and compliance, we build and modernize applications that enhance operational effectiveness, improve service delivery, and support digital transformation initiatives.</div>
+        </p>
+      </div>
+      <div class="pillar">
+        <h3 class="pillar-title">Core Competencies</h3>
+        <p class="pillar-content">
+          <p>Java Software Architecture and Development</p>
+          <div>Enterprise development using Spring Framework</div>
+          <div>Cloud-native solutions leveraging AWS</div>
+          <div>Legacy system modernization, maintenance, and support</div>
+          <p>DevSecOps Integration</p>
+          <div>CI/CD Pipelines</div>
+          <div>Continuous and automated testing, reporting, and quality assurance</div>
+          <p>Agile Project Management</p>
+          <div>IT modernization and digital transformation</div>
+          <div>Expertise in Scrum, Kanban, SAFe, and Lean methodologies</div>
+        </p>
+      </div>
+      <div class="pillar">
+        <h3 class="pillar-title">Differentiators</h3>
+        <p class="pillar-content">
+          <div>Combined 50+ years developing and modernizing Java applications</div>
+          <div>AWS Certified Solutions Architect - Professional</div>
+          <div>We specialize in streamlining the development process through contract-driven development and automated deployment solutions</div>
+          <div>Our focus is on providing contract-driven containerized solutions with consumable reporting at all phases of the product lifecycle</div>
+        </p>
+      </div>
+    </div>
+    <a href="capability.html" class="capability-link" target="_blank">
+      Capability Statement
+    </a>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="about-content">
+      <h2 class="about-title glow">About Us</h2>
+      <p class="about-text">
+        At empha.tech, we specialize in streamlining the development process through 
+        contract-driven development and automated deployment solutions.
+      </p>
+      <p class="typed-text"></p>
+      <div class="contact-info glow" id="contact">
+        <p>Contact Us</p>
+        <p><a href="mailto:info@empha.tech">info@empha.tech</a></p>
+        <p><a href="https://linkedin.com/company/empha-tech" target="_blank">LinkedIn</a></p>
+        <p><a href="https://github.com/empha-tech" target="_blank">GitHub</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-flow" id="process">
     <div class="arc top-arc glow">> continuous_testing</div>
     <div class="boxes-container">
       <div class="box glow">> contract_driven</div>
@@ -353,23 +638,6 @@
       <div class="box glow">> deploy</div>
     </div>
     <div class="arc bottom-arc glow">> consumable_reporting</div>
-  </section>
-
-  <section class="about-section">
-    <div class="about-content">
-      <h2 class="about-title glow">> about_us</h2>
-      <p class="about-text">
-        At empha.tech, we specialize in streamlining the development process through 
-        contract-driven development and automated deployment solutions.
-      </p>
-      <p class="typed-text"></p>
-      <div class="contact-info glow">
-        <p>> contact_us</p>
-        <p><a href="mailto:info@empha.tech">info@empha.tech</a></p>
-        <p><a href="https://linkedin.com/company/empha-tech" target="_blank">LinkedIn</a></p>
-        <p><a href="https://github.com/empha-tech" target="_blank">GitHub</a></p>
-      </div>
-    </div>
   </section>
 
   <script>
