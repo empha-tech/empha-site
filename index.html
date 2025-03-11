@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>empha.tech</title>
   <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -561,138 +561,264 @@
         font-size: 0.9rem;
       }
     }
+
+    /* Desktop-specific layout (default) */
+    .desktop-view {
+        display: block;
+    }
+
+    .mobile-view {
+        display: none;
+    }
+
+    /* Mobile-specific layout */
+    @media (max-width: 768px) {
+        .desktop-view {
+            display: none;
+        }
+
+        .mobile-view {
+            display: block;
+        }
+
+        /* Mobile-specific styles */
+        .mobile-section {
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .mobile-header {
+            font-family: 'VT323', monospace;
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .mobile-card {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .mobile-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .mobile-card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+        }
+
+        .mobile-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem;
+        }
+
+        .mobile-list-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            font-size: 1.1rem;
+        }
+
+        .mobile-contact {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .mobile-email {
+            color: black;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 0.5rem;
+        }
+
+        .capability-link {
+            width: 100%;
+            text-align: center;
+        }
+    }
   </style>
 </head>
 <body>
-  <section class="hero" id="hero">
-    <h1 class="company-name glow">> empha.tech</h1>
-    <nav class="nav-bar">
-      <a href="#capabilities" class="nav-link">Capabilities</a>
-      <a href="#about" class="nav-link">About</a>
-    </nav>
-  </section>
+  <!-- Desktop Layout -->
+  <div class="desktop-view">
+    <section class="hero" id="hero">
+      <h1 class="company-name glow">> empha.tech</h1>
+      <nav class="nav-bar">
+        <a href="#capabilities" class="nav-link">Capabilities</a>
+        <a href="#about" class="nav-link">About</a>
+      </nav>
+    </section>
 
-  <section class="capabilities" id="capabilities">
-    <h2 class="capabilities-header">Empowering Development Through Innovation</h2>
-    <div class="capabilities-pillars">
-      <div class="pillar">
-        <h3 class="pillar-title">We are...</h3>
-        <p class="pillar-content">
-          <div>a leading provider of Java software architecture and development services, delivering robust, scalable, and secure solutions for government agencies. Our expertise spans enterprise application development, cloud-native microservices, and Agile software engineering, ensuring mission-critical systems operate efficiently and securely. </div>
-          <br>
-          <div> With a deep understanding of Federal IT requirements and compliance, we build and modernize applications that enhance operational effectiveness, improve service delivery, and support digital transformation initiatives.</div>
-        </p>
+    <section class="capabilities" id="capabilities">
+      <h2 class="capabilities-header">Empowering Development Through Innovation</h2>
+      <div class="capabilities-pillars">
+        <div class="pillar">
+          <h3 class="pillar-title">We are...</h3>
+          <p class="pillar-content">
+            <div>a leading provider of Java software architecture and development services, delivering robust, scalable, and secure solutions for government agencies. Our expertise spans enterprise application development, cloud-native microservices, and Agile software engineering, ensuring mission-critical systems operate efficiently and securely. </div>
+            <br>
+            <div> With a deep understanding of Federal IT requirements and compliance, we build and modernize applications that enhance operational effectiveness, improve service delivery, and support digital transformation initiatives.</div>
+          </p>
+        </div>
+        <div class="pillar">
+          <h3 class="pillar-title">Core Competencies</h3>
+          <p class="pillar-content">
+            <p>Java Software Architecture and Development</p>
+            <div>Enterprise development using Spring Framework</div>
+            <div>Cloud-native solutions leveraging AWS</div>
+            <div>Legacy system modernization, maintenance, and support</div>
+            <p>DevSecOps Integration</p>
+            <div>CI/CD Pipelines</div>
+            <div>Continuous and automated testing, reporting, and quality assurance</div>
+            <p>Agile Project Management</p>
+            <div>IT modernization and digital transformation</div>
+            <div>Expertise in Scrum, Kanban, SAFe, and Lean methodologies</div>
+          </p>
+        </div>
+        <div class="pillar">
+          <h3 class="pillar-title">Differentiators</h3>
+          <p class="pillar-content">
+            <div>Combined 50+ years developing and modernizing Java applications</div>
+            <div>AWS Certified Solutions Architect - Professional</div>
+            <div>We specialize in streamlining the development process through contract-driven development and automated deployment solutions</div>
+            <div>Our focus is on providing contract-driven containerized solutions with consumable reporting at all phases of the product lifecycle</div>
+          </p>
+        </div>
       </div>
-      <div class="pillar">
-        <h3 class="pillar-title">Core Competencies</h3>
-        <p class="pillar-content">
-          <p>Java Software Architecture and Development</p>
-          <div>Enterprise development using Spring Framework</div>
-          <div>Cloud-native solutions leveraging AWS</div>
-          <div>Legacy system modernization, maintenance, and support</div>
-          <p>DevSecOps Integration</p>
-          <div>CI/CD Pipelines</div>
-          <div>Continuous and automated testing, reporting, and quality assurance</div>
-          <p>Agile Project Management</p>
-          <div>IT modernization and digital transformation</div>
-          <div>Expertise in Scrum, Kanban, SAFe, and Lean methodologies</div>
-        </p>
-      </div>
-      <div class="pillar">
-        <h3 class="pillar-title">Differentiators</h3>
-        <p class="pillar-content">
-          <div>Combined 50+ years developing and modernizing Java applications</div>
-          <div>AWS Certified Solutions Architect - Professional</div>
-          <div>We specialize in streamlining the development process through contract-driven development and automated deployment solutions</div>
-          <div>Our focus is on providing contract-driven containerized solutions with consumable reporting at all phases of the product lifecycle</div>
-        </p>
-      </div>
-    </div>
-    <a href="capability.html" class="capability-link" target="_blank">
-      Capability Statement
-    </a>
-  </section>
+      <a href="capability.html" class="capability-link" target="_blank">
+        Capability Statement
+      </a>
+    </section>
 
-  <section class="about-section" id="about">
-    <div class="about-content">
-      <h2 class="about-title glow">About Us</h2>
-      <p class="about-text">
-        At empha.tech, we specialize in streamlining the development process through 
-        contract-driven development and automated deployment solutions.
-      </p>
-      <p class="typed-text"></p>
-      <div class="contact-info glow" id="contact">
-        <p>Contact Us</p>
-        <p><a href="mailto:info@empha.tech">info@empha.tech</a></p>
-        <p><a href="https://linkedin.com/company/empha-tech" target="_blank">LinkedIn</a></p>
-        <p><a href="https://github.com/empha-tech" target="_blank">GitHub</a></p>
+    <section class="about-section" id="about">
+      <div class="about-content">
+        <h2 class="about-title glow">About Us</h2>
+        <p class="about-text">
+          At empha.tech, we specialize in streamlining the development process through 
+          contract-driven development and automated deployment solutions.
+        </p>
+        <p class="typed-text"></p>
+        <div class="contact-info glow" id="contact">
+          <p>Contact Us</p>
+          <p><a href="mailto:info@empha.tech">info@empha.tech</a></p>
+          <p><a href="https://linkedin.com/company/empha-tech" target="_blank">LinkedIn</a></p>
+          <p><a href="https://github.com/empha-tech" target="_blank">GitHub</a></p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="process-flow" id="process">
-    <div class="arc top-arc glow">> continuous_testing</div>
-    <div class="boxes-container">
-      <div class="box glow">> contract_driven</div>
-      <div class="connector glow">> containerized</div>
-      <div class="box glow">> deploy</div>
-    </div>
-    <div class="arc bottom-arc glow">> consumable_reporting</div>
-  </section>
+    <section class="process-flow" id="process">
+      <div class="arc top-arc glow">> continuous_testing</div>
+      <div class="boxes-container">
+        <div class="box glow">> contract_driven</div>
+        <div class="connector glow">> containerized</div>
+        <div class="box glow">> deploy</div>
+      </div>
+      <div class="arc bottom-arc glow">> consumable_reporting</div>
+    </section>
+  </div>
+
+  <!-- Mobile Layout -->
+  <div class="mobile-view">
+    <section class="mobile-section">
+      <h1 class="mobile-header glow">> empha.tech</h1>
+      
+      <!-- Main Content Card -->
+      <div class="mobile-card">
+        <p class="mobile-text">
+          A leading provider of Java software architecture and development services, delivering robust, 
+          scalable, and secure solutions for government agencies.
+        </p>
+        
+        <h2 class="mobile-card-title">Core Capabilities</h2>
+        <ul class="mobile-list">
+          <li class="mobile-list-item">Java Software Architecture & Spring Development</li>
+          <li class="mobile-list-item">Cloud-native AWS Solutions</li>
+          <li class="mobile-list-item">DevSecOps Integration & CI/CD</li>
+          <li class="mobile-list-item">Legacy System Modernization</li>
+        </ul>
+
+        <div class="mobile-contact">
+          <a href="mailto:info@empha.tech" class="mobile-email">info@empha.tech</a>
+          <a href="capability.html" class="capability-link" target="_blank">Capability Statement</a>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const companyName = document.querySelector('.company-name');
-      const boxesContainer = document.querySelector('.boxes-container');
-      const arcs = document.querySelectorAll('.arc');
-      const connector = document.querySelector('.connector');
-      const aboutSection = document.querySelector('.about-section');
-      const typedText = document.querySelector('.typed-text');
-      const textToType = "Our focus is on providing contract-driven containerized solutions with consumable reporting at all phases of the product lifecycle.";
-      let charIndex = 0;
-      let isTyping = false;
+      const isMobile = window.innerWidth <= 768;
+      
+      if (!isMobile) {
+        const companyName = document.querySelector('.company-name');
+        const boxesContainer = document.querySelector('.boxes-container');
+        const arcs = document.querySelectorAll('.arc');
+        const connector = document.querySelector('.connector');
+        const aboutSection = document.querySelector('.about-section');
+        const typedText = document.querySelector('.typed-text');
+        const textToType = "Our focus is on providing contract-driven containerized solutions with consumable reporting at all phases of the product lifecycle.";
+        let charIndex = 0;
+        let isTyping = false;
 
-      function typeText() {
-        if (charIndex < textToType.length) {
-          typedText.textContent += textToType.charAt(charIndex);
-          charIndex++;
-          setTimeout(typeText, Math.random() * 50 + 50); // Random delay between 50-100ms
-        }
-      }
-
-      function handleScroll() {
-        const scrollPosition = window.scrollY;
-        const windowHeight = window.innerHeight;
-        
-        // First scroll: Core capabilities
-        if (scrollPosition > windowHeight * 0.1) {
-          companyName.classList.add('split');
-          boxesContainer.classList.add('visible');
-          arcs.forEach(arc => arc.classList.add('visible'));
-          connector.classList.add('visible');
-        } else {
-          companyName.classList.remove('split');
-          boxesContainer.classList.remove('visible');
-          arcs.forEach(arc => arc.classList.remove('visible'));
-          connector.classList.remove('visible');
-        }
-
-        // Second scroll: About section with typing effect
-        if (scrollPosition > windowHeight * 1.1) {
-          aboutSection.classList.add('visible');
-          if (!isTyping) {
-            isTyping = true;
-            charIndex = 0;
-            typedText.textContent = '';
-            setTimeout(typeText, 500); // Start typing after a brief delay
+        function typeText() {
+          if (charIndex < textToType.length) {
+            typedText.textContent += textToType.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeText, Math.random() * 50 + 50); // Random delay between 50-100ms
           }
-        } else {
-          aboutSection.classList.remove('visible');
-          isTyping = false;
         }
-      }
 
-      window.addEventListener('scroll', handleScroll);
+        function handleScroll() {
+          const scrollPosition = window.scrollY;
+          const windowHeight = window.innerHeight;
+          
+          // First scroll: Core capabilities
+          if (scrollPosition > windowHeight * 0.1) {
+            companyName.classList.add('split');
+            boxesContainer.classList.add('visible');
+            arcs.forEach(arc => arc.classList.add('visible'));
+            connector.classList.add('visible');
+          } else {
+            companyName.classList.remove('split');
+            boxesContainer.classList.remove('visible');
+            arcs.forEach(arc => arc.classList.remove('visible'));
+            connector.classList.remove('visible');
+          }
+
+          // Second scroll: About section with typing effect
+          if (scrollPosition > windowHeight * 1.1) {
+            aboutSection.classList.add('visible');
+            if (!isTyping) {
+              isTyping = true;
+              charIndex = 0;
+              typedText.textContent = '';
+              setTimeout(typeText, 500); // Start typing after a brief delay
+            }
+          } else {
+            aboutSection.classList.remove('visible');
+            isTyping = false;
+          }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+      }
     });
   </script>
 </body>
