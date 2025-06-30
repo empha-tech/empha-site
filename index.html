@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>empha.tech</title>
   <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
   <style>
     /* General Reset */
     body, html {
@@ -506,13 +511,7 @@
 
     /* Rename current capabilities to process-flow */
     .process-flow {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      font-family: 'VT323', monospace;
-      font-size: 1.2rem;
-      letter-spacing: 1px;
+      display: none !important;
     }
 
     /* Mobile adjustments */
@@ -652,6 +651,26 @@
             text-align: center;
         }
     }
+
+    .pillar-content h4 {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .pillar-content ul {
+      list-style-type: disc;
+      padding-left: 1.2rem;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .pillar-content.we-are p,
+    .pillar-content.differentiators p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
   </style>
 </head>
 <body>
@@ -670,35 +689,42 @@
       <div class="capabilities-pillars">
         <div class="pillar">
           <h3 class="pillar-title">We are...</h3>
-          <p class="pillar-content">
-            <div>a leading provider of Java software architecture and development services, delivering robust, scalable, and secure solutions for government agencies. Our expertise spans enterprise application development, cloud-native microservices, and Agile software engineering, ensuring mission-critical systems operate efficiently and securely. </div>
-            <br>
-            <div> With a deep understanding of Federal IT requirements and compliance, we build and modernize applications that enhance operational effectiveness, improve service delivery, and support digital transformation initiatives.</div>
-          </p>
+          <div class="pillar-content we-are">
+            <p>a leading provider of Java software architecture and development services, delivering robust, scalable, and secure solutions for government agencies. Our expertise spans enterprise application development, cloud-native microservices, and Agile software engineering, ensuring mission-critical systems operate efficiently and securely. </p>
+            <p> With a deep understanding of Federal IT requirements and compliance, we build and modernize applications that enhance operational effectiveness, improve service delivery, and support digital transformation initiatives.</p>
+          </div>
         </div>
         <div class="pillar">
           <h3 class="pillar-title">Core Competencies</h3>
-          <p class="pillar-content">
-            <p>Java Software Architecture and Development</p>
-            <div>Enterprise development using Spring Framework</div>
-            <div>Cloud-native solutions leveraging AWS</div>
-            <div>Legacy system modernization, maintenance, and support</div>
-            <p>DevSecOps Integration</p>
-            <div>CI/CD Pipelines</div>
-            <div>Continuous and automated testing, reporting, and quality assurance</div>
-            <p>Agile Project Management</p>
-            <div>IT modernization and digital transformation</div>
-            <div>Expertise in Scrum, Kanban, SAFe, and Lean methodologies</div>
-          </p>
+          <div class="pillar-content">
+            <h4>Java Software Architecture and Development</h4>
+            <ul>
+              <li>Enterprise development using Spring Framework</li>
+              <li>Cloud-native solutions leveraging AWS</li>
+              <li>Legacy system modernization, maintenance, and support</li>
+            </ul>
+
+            <h4>DevSecOps Integration</h4>
+            <ul>
+              <li>CI/CD Pipelines</li>
+              <li>Continuous and automated testing, reporting, and quality assurance</li>
+            </ul>
+
+            <h4>Agile Project Management</h4>
+            <ul>
+              <li>IT modernization and digital transformation</li>
+              <li>Expertise in Scrum, Kanban, SAFe, and Lean methodologies</li>
+            </ul>
+          </div>
         </div>
         <div class="pillar">
           <h3 class="pillar-title">Differentiators</h3>
-          <p class="pillar-content">
-            <div>Combined 50+ years developing and modernizing Java applications</div>
-            <div>AWS Certified Solutions Architect - Professional</div>
-            <div>We specialize in streamlining the development process through contract-driven development and automated deployment solutions</div>
-            <div>Our focus is on providing contract-driven containerized solutions with consumable reporting at all phases of the product lifecycle</div>
-          </p>
+          <div class="pillar-content differentiators">
+            <p>With more than five decades of collective experience, our senior architects have delivered enterprise Java solutions that power mission-critical systems across federal agencies.</p>
+            <p>AWS Certified Solutions Architect - Professional</p>
+            <p>We specialize in streamlining the development process through contract-driven development and automated deployment solutions.</p>
+            <p>Our focus is on providing contract-driven containerized solutions with consumable reporting at all phases of the product lifecycle.</p>
+          </div>
         </div>
       </div>
       <a href="capability.html" class="capability-link" target="_blank">
